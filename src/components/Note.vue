@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Editor from './Editor';
+import Editor from './Editor'
 export default {
-  components:{
+  components: {
     Editor
   }
 }
