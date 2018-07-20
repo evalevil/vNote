@@ -17,7 +17,7 @@
       <span
         class="ui small disabled header"
         v-if="!entities.length">
-        空笔记，请按下 '添加笔记' 创建笔记。
+        请按下 '添加笔记' 创建笔记。
       </span>
     </div>
   </div>
