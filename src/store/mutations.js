@@ -1,4 +1,4 @@
-import { loadCollection } from '../database'
+import { loadCollection, db } from '../database'
 
 export default {
   setInitialData (state) {
@@ -11,9 +11,26 @@ export default {
         // db.saveDatabase()
         const _entities = collection.chain()
           .find()
-          .simplesort('$Loki', 'isdesc')
+          .simplesort('$loki', 'isdesc')
           .data()
         state.entities = _entities
+      })
+  },
+  createEntity (state) {
+    loadCollection('notes')
+      .then((collection) => {
+        const entity = collection.insert({
+          body: ''
+        })
+        db.saveDatabase()
+        state.entities.unshift(entity)
+      })
+  },
+  updateEntity (state, entity) {
+    loadCollection('notes')
+      .then((collection) => {
+        collection.update(entity)
+        db.saveDatabase()
       })
   }
 }
