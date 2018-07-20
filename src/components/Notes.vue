@@ -8,11 +8,14 @@
       添加笔记
     </a>
     <div class="ui divided items">
-      <note>
+      <note
+      v-for="entity in entities"
+      v-bind:entity="entity">
       </note>
       <span
-        class="ui small disabled header">
-        还没有笔记，请按下 '添加笔记' 按钮。
+        class="ui small disabled header"
+        v-if="!entities.length">
+        空笔记，请按下 '添加笔记' 创建笔记。
       </span>
     </div>
   </div>
@@ -20,7 +23,22 @@
 
 <script>
 import Note from './Note'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
+  created () {
+    this.initial()
+  },
+  methods: {
+    ...mapActions([
+      'initial'
+    ])
+  },
+  computed: {
+    ...mapGetters([
+      'entities'
+    ])
+  },
   components: {
     Note
   }
