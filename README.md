@@ -1,21 +1,19 @@
-# vuex-notes-example
+# vNote
 
-> A Vue.js project
+> 一个基于 Vue.js 开发的笔记应用
 
-## Build Setup
+## 开始
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动 App，自动加载地址：http://127.0.0.1:8080/
 npm run dev
 
-# build for production with minification
+# 使用 minification 编译
 npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
