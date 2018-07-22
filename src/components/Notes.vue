@@ -2,7 +2,7 @@
   <div class="ui container notes">
     <h4 class="ui horizontal divider header">
       <i class="paw icon"></i>
-      Notes App
+      vNote
     </h4>
     <a class="ui right floated basic violet button"
     v-on:click="create">
