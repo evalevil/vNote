@@ -3,12 +3,9 @@ hostname: RancherOS
 rancher:
   network:
     interfaces:
-      eth0:
-        address: 192.168.50.101/24
-        dhcp: false
-        gateway: 192.168.50.254
-        mtu: 1500
+      "mac=ea:34:71:66:90:12:01":
+        dhcp: true
   services_include:
     open-vm-tools: true
 ssh_authorized_keys:
-- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4VnmbArPmO7ienvQw4Cw38Jat/HXDhAhVZH+8e9sHZFI9MNX1x2IUKj860q4nRe+ngBKdDG8FdBv5an7U7WyB6M2mQFwq5pKv0pcUx4sjabsLhoFVfrdvOzL92BOnITKh3wkjLeRfddX+J85DjP20KMuKG/Uvs07O555LNC477xYthYZlduEnBWhugvl6ZHnJTs3uPzSVnSW7vLdm5uGajgjRSKYBTybTPi6OFVeD8tuqBT2UyeD8CJuPk1Umn85KyfK1w6IFDb3c+aVsNTF1s/9+dnPbMC6R6yYmh/goYxMgavuvOPWeL7VZVOf5j1udwNyt6N/0swZoeFcLg1LF whoami@WhoamideMacBook-Pro.local
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4VnmbArPmO7ienvQw4Cw38Jat/HXDhAhVZH+8e9sHZFI9MNX1x2IUKj860q4nRe+ngBKdDG8FdBv5an7U7WyB6M2mQFwq5pKv0pcUx4sjabsLhoFVfrdvOzL92BOnITKh3wkjLeRfddX+J85DjP20KMuKG/Uvs07O555LNC477xYthYZlduEnBWhugvl6ZHnJTs3uPzSVnSW7vLdm5uGajgjRSKYBTybTPi6OFVeD8tuqBT2UyeD8CJuPk1Umn85KyfK1w6IFDb3c+aVsNTF1s/9+dnPbMC6R6yYmh/goYxMgavuvOPWeL7VZVOf5j1udwNyt6N/0swZoeFcLg1LF rancher@rancheros
