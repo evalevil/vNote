@@ -1,6 +1,7 @@
 #cloud-config
-hostname: RancherOS
+hostname: Master
 rancher:
+  console: centos
   docker:
     registry_mirror: https://uxfagmza.mirror.aliyuncs.com
   system_docker:
@@ -11,7 +12,7 @@ rancher:
   network:
     interfaces:
       eth0:
-          dhcp: true
+        dhcp: true
   services_include:
     open-vm-tools: true
 ssh_authorized_keys:
