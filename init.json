@@ -1,0 +1,56 @@
+ssh_authorized_keys:
+- ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4VnmbArPmO7ienvQw4Cw38Jat/HXDhAhVZH+8e9sHZFI9MNX1x2IUKj860q4nRe+ngBKdDG8FdBv5an7U7WyB6M2mQFwq5pKv0pcUx4sjabsLhoFVfrdvOzL92BOnITKh3wkjLeRfddX+J85DjP20KMuKG/Uvs07O555LNC477xYthYZlduEnBWhugvl6ZHnJTs3uPzSVnSW7vLdm5uGajgjRSKYBTybTPi6OFVeD8tuqBT2UyeD8CJuPk1Umn85KyfK1w6IFDb3c+aVsNTF1s/9+dnPbMC6R6yYmh/goYxMgavuvOPWeL7VZVOf5j1udwNyt6N/0swZoeFcLg1LF whoami@WhoamideMacBook-Pro.local
+- github:F00cked
+write_files:
+- encoding: ""
+  content: |-
+    #!/bin/bash
+    echo hi
+  owner: root
+  path: /etc/rc.local
+  permissions: '0755'
+hostname: k3s-server
+run_cmd:
+- "echo hi && echo bye"
+boot_cmd:
+- "echo hi && echo bye"
+init_cmd:
+- "echo hi && echo bye"
+
+k3os:
+  // data_sources:
+  // - aws
+  // - cdrom
+  // modules:
+  // - kvm
+  // - nvme
+  sysctl:
+    kernel.printk: 4 4 1 7
+    kernel.kptr_restrict: 1
+  dns_nameservers:
+  - 8.8.8.8
+  - 114.114.114.114
+  ntp_servers:
+  - 0.cn.pool.ntp.org
+  - 1.cn.pool.ntp.org
+  // wifi:
+  // - name: home
+  //   passphrase: mypassword
+  // - name: nothome
+  //   passphrase: somethingelse
+  password: Demo@123!.
+  server_url: https://k3s-server:6443
+  token: K10193107d2b0290b5e814da26d10d2033aa338be3f4fddff259ebbf2b971716de9: :server: 723859bf36abbde3e3143b870c2fd99b
+  labels:
+    region: cn-cq-1
+    somekey: demo
+  k3s_args:
+  - server
+  - "--disable-agent"
+  environment:
+    // http_proxy: http://myserver
+    // https_proxy: http://myserver
+
+  // taints:
+  // - key1=value1:NoSchedule
+  // - key1=value1:NoExecute
