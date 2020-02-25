@@ -9,7 +9,7 @@ write_files:
   owner: root
   path: /etc/rc.local
   permissions: '0755'
-hostname: k3s-server
+hostname: k3s-agent
 
 k3os:
   sysctl:
