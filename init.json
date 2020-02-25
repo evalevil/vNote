@@ -18,12 +18,6 @@ init_cmd:
 - "echo hi && echo bye"
 
 k3os:
-  // data_sources:
-  // - aws
-  // - cdrom
-  // modules:
-  // - kvm
-  // - nvme
   sysctl:
     kernel.printk: 4 4 1 7
     kernel.kptr_restrict: 1
@@ -33,24 +27,12 @@ k3os:
   ntp_servers:
   - 0.cn.pool.ntp.org
   - 1.cn.pool.ntp.org
-  // wifi:
-  // - name: home
-  //   passphrase: mypassword
-  // - name: nothome
-  //   passphrase: somethingelse
   password: Demo@123!.
   server_url: https://k3s-server:6443
   token: K10193107d2b0290b5e814da26d10d2033aa338be3f4fddff259ebbf2b971716de9: :server: 723859bf36abbde3e3143b870c2fd99b
   labels:
-    region: cn-cq-1
+    region: cn-cq-demo
     somekey: demo
   k3s_args:
   - server
   - "--disable-agent"
-  environment:
-    // http_proxy: http://myserver
-    // https_proxy: http://myserver
-
-  // taints:
-  // - key1=value1:NoSchedule
-  // - key1=value1:NoExecute
