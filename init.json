@@ -29,7 +29,7 @@ k3os:
   - 1.cn.pool.ntp.org
   password: Demo@123!.
   server_url: https://k3s-server:6443
-  token: K10193107d2b0290b5e814da26d10d2033aa338be3f4fddff259ebbf2b971716de9: :server: 723859bf36abbde3e3143b870c2fd99b
+  token: K10193107d2b0290b5e814da26d10d2033aa338be3f4fddff259ebbf2b971716de9::server:723859bf36abbde3e3143b870c2fd99b
   labels:
     region: cn-cq-demo
     somekey: demo
